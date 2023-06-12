@@ -1,6 +1,45 @@
-@import "./reset.css"
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Ruslan+Display&display=swap");
 
-/* :root{
-    --black: #000;
-} */
+/* 
+font-family: 'Roboto', sans-serif;
+font-family: 'Ruslan Display', cursive; 
+*/
 
+:root {
+  --black: #000;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 80%;
+  height: 700px;
+  border: 10px solid black;
+
+  display: flex;
+  /* justify-content: space-evenly; */
+  /* align-items: center;   */
+  column-gap: 20px;
+  row-gap: 20px;
+
+  flex-wrap: wrap;
+  align-content: center;
+}
+.item {
+  width: 150px;
+  height: 150px;
+  padding: 1em;
+
+  background-color: salmon;
+  border: 10px solid red;
+  border-radius: 10px;
+
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: white;
+
+}
