@@ -23,12 +23,12 @@ body {
   color: var(--black);
   font-family: "Roboto", sans-serif;
 }
-.title-1{
-  font-family: 'Ruslan Display', cursive; 
+.title-1 {
+  font-family: "Ruslan Display", cursive;
   font-size: 62px;
   margin-bottom: 24px;
 }
-.btn-black{
+.btn-black {
   width: 272px;
   height: 78px;
 
@@ -38,23 +38,22 @@ body {
 
   transition: opacity 0.2s ease-in;
 }
-.btn-black:hover{
+.btn-black:hover {
   opacity: 0.8;
 }
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  
 }
 .bg {
   background-image: url("../img/img/bg-image1.jpg");
 
   background-position: center;
-  height: 1000px;
-
+  min-height: 1000px;
+  width: 100%;
   /* background-size: cover; */
 }
-.header-container {  
+.header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,8 +72,8 @@ body {
   padding: 70px 70px;
 
   background-image: url("../img/img/learn-more.png");
-margin-left: auto;
-margin-top: 463px;
+  margin-left: auto;
+  margin-top: 463px;
   /* position: absolute;
   bottom: 0;
   right: 0; */
