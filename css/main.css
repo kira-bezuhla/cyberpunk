@@ -11,6 +11,7 @@ font-family: 'Ruslan Display', cursive;
   --white: #fff;
   --accent-yellow: #f8f200;
   --accent-blue: #52bedc;
+  --grey: #777777;
 }
 /* * {
   border: 1px solid red;
@@ -41,6 +42,10 @@ body {
   width: 100%;
   /* background-size: cover; */
 }
+.black {
+  background-color: var(--black);
+  color: var(--white);
+}
 
 /* GENERAL */
 .title-1 {
@@ -63,9 +68,24 @@ body {
 .btn-black:hover {
   opacity: 0.8;
 }
+.btn-yellow {
+  width: 192px;
+  height: 59px;
+
+  margin-bottom: 15px;
+
+  background-color: var(--accent-yellow);
+  color: var(--black);
+  font-weight: bold;
+  text-align: center;
+
+  transition: opacity 0.2s ease-in;
+}
+.btn-yellow:hover {
+  opacity: 0.8;
+}
 .content__text {
   padding-right: 30%;
-  margin-bottom: 70px;
 }
 .content__text strong {
   color: var(--accent-blue);
@@ -98,7 +118,7 @@ body {
 }
 /* IMAGES */
 .images {
-  margin-bottom: 70px;
+  margin: 70px 0;
 
   display: flex;
   flex-direction: row;
@@ -106,17 +126,16 @@ body {
   row-gap: 32px;
 
   flex-wrap: wrap;
-  
 }
 
-.images-big{
-  order:1;
+.images-big {
+  order: 1;
 
   position: relative;
   /* width: 100%; */
 }
-.images-big:after{
-  content: '';
+.images-big:after {
+  content: "";
   width: 0;
   height: 0;
 
@@ -124,13 +143,13 @@ body {
   border-top: 20px solid transparent;
   border-right: 20px solid var(--white);
   border-bottom: 20px solid var(--white);
-  
+
   position: absolute;
   bottom: 0;
   right: 0;
 }
-.images-big:before{
-  content: '';
+.images-big:before {
+  content: "";
   width: 0;
   height: 0;
 
@@ -138,28 +157,28 @@ body {
   border-top: 20px solid var(--white);
   border-right: 20px solid transparent;
   border-bottom: 20px solid transparent;
-  
+
   position: absolute;
   top: 0;
   left: 0;
 }
-.images-big img{
+.images-big img {
   width: 100%;
 }
-.images-small{
+.images-small {
   display: flex;
   flex-direction: column;
   column-gap: 32px;
   row-gap: 32px;
 
-  order:0;
+  order: 0;
 }
 
-.images-small__wrap{
+.images-small__wrap {
   position: relative;
 }
-.images-small__wrap:after{
-  content: '';
+.images-small__wrap:after {
+  content: "";
   width: 0;
   height: 0;
 
@@ -167,13 +186,13 @@ body {
   border-top: 20px solid transparent;
   border-right: 20px solid var(--white);
   border-bottom: 20px solid var(--white);
-  
+
   position: absolute;
   bottom: 0;
   right: 0;
 }
-.images-small__wrap:before{
-  content: '';
+.images-small__wrap:before {
+  content: "";
   width: 0;
   height: 0;
 
@@ -181,12 +200,105 @@ body {
   border-top: 20px solid var(--white);
   border-right: 20px solid transparent;
   border-bottom: 20px solid transparent;
-  
+
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.images-small__wrap img{
+.images-small__wrap img {
   width: 100%;
+}
+/* 3rd SCREEN */
+.title {
+  display: flex;
+  flex-direction: row;
+  column-gap: 32px;
+}
+.form-img {
+  display: flex;
+  flex-direction: row;
+  column-gap: 32px;
+  align-items: end;
+
+  margin: 25px 0 70px 0;
+}
+/* FORM */
+.form {
+  display: flex;
+  flex-direction: column;
+  min-width: 460px;
+}
+.wrapper {
+  background: transparent;
+
+  border: none;
+  border-bottom: 1px solid var(--grey);
+
+  margin-bottom: 35px;
+  padding-bottom: 13px;
+
+  width: 100%;
+  height: 35px;
+
+  
+}
+::placeholder{
+  color: var(--white);
+  font-weight: 300;
+}
+.input-file {
+  width: 100%;
+  height: 120px;
+
+  margin-bottom: 35px;
+background-image: url("../img/img/input-file.svg")
+}
+/* CHECKBOX */
+.checkbox {
+  font-size: 12px;
+  font-weight: 300;
+}
+.checkbox label {
+  position: relative;
+  padding-left: 30px;
+  padding-top: 3px;
+}
+label input[type="checkbox"] {
+  position: absolute; /* prevent taking any space */
+  /* cross-browser hiding */
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+label span {
+  position: absolute;
+  /* position to the free space in <label> */
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: var(--black);
+  border: 1px solid var(--grey);
+  transition: 0.3s background-color; /* slight transition */
+}
+/* the check icon */
+label span:after {
+  content: "";
+  position: absolute;
+  display: none;
+
+  /* check icon */
+  left: 5px;
+  top: 0px;
+
+  width: 8px;
+  height: 14px;
+  border: solid var(--accent-yellow);
+  border-width: 0 3px 3px 0;
+
+  transform: rotate(45deg);
+}
+label input:checked ~ span:after {
+  display: block;
 }
