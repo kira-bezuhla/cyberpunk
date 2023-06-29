@@ -49,7 +49,15 @@ body {
 .yellow {
   background-color: var(--accent-yellow);
 }
+.picture-black {
+  background-color: var(--black);
+  color: var(--white);
 
+  background-image: url("../img/img/ps-img.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
 /* GENERAL */
 .title-1 {
   font-family: "Ruslan Display", cursive;
@@ -57,6 +65,15 @@ body {
   margin-bottom: 24px;
   margin-top: 70px;
   line-height: normal;
+}
+.title-2{
+  margin-top: 20px;
+  margin-bottom: 15px;
+font-size: 24px;
+color: var(--accent-blue);
+line-height: normal;
+font-weight: 500;
+
 }
 .btn-black {
   width: 272px;
@@ -244,10 +261,8 @@ body {
 
   width: 100%;
   height: 35px;
-
-  
 }
-::placeholder{
+::placeholder {
   color: var(--white);
   font-weight: 300;
 }
@@ -256,7 +271,7 @@ body {
   height: 120px;
 
   margin-bottom: 35px;
-background-image: url("../img/img/input-file.svg")
+  background-image: url("../img/img/input-file.svg");
 }
 /* CHECKBOX */
 .checkbox {
@@ -308,45 +323,41 @@ label input:checked ~ span:after {
 }
 
 /* DEEP-DIVE */
-.deep-dive{
+.deep-dive {
   display: flex;
   flex-direction: row;
   column-gap: 40px;
 
   align-items: center;
   margin-bottom: 55px;
-
 }
-.deep-dive__images{
+.deep-dive__images {
   display: flex;
   row-gap: 26px;
   flex-direction: column;
 
   min-width: 630px;
 }
-.deep-dive__icons{
+.deep-dive__icons {
   display: flex;
   flex-direction: row;
   column-gap: 25px;
 
   justify-content: center;
 }
-.deep-dive__text{
-
-}
-.content__text-type2{
+.content__text-type2 {
   padding-right: 0%;
 }
-.list{
+.list {
   margin-top: 25px;
 }
-.list li{
+.list li {
   margin-bottom: 15px;
 }
-.list li img{
+.list li img {
   margin-right: 10px;
 }
-.btn-black__small{
+.btn-black__small {
   width: 194px;
   height: 59px;
   margin-top: 40px;
@@ -361,4 +372,31 @@ label input:checked ~ span:after {
 }
 .btn-black:hover {
   opacity: 0.8;
+}
+
+/* BUY-SECTION */
+.bg-img {
+  min-width: 50%;
+}
+.buy-text {
+  margin-left: 50%;
+  padding-left: 25px;
+
+}
+.skip{
+  margin-bottom: 50px;
+}
+.buy__icons{  
+  margin-bottom: 70px;
+
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  column-gap: 15px;
+  row-gap: 50px;
+
+  flex-wrap: wrap;  
+  max-width: 320px;
+
 }
